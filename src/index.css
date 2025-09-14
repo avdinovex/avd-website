@@ -1,0 +1,18 @@
+/* src/index.css */
+@import "tailwindcss"; /* Or your specific entry points */
+
+/* 1. Define the keyframes for the scrolling animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* Translate by -50% to create a seamless loop with duplicated items */
+    transform: translateX(-50%);
+  }
+}
+
+/* 2. Create a utility class to apply the animation */
+.animate-scroll {
+  animation: scroll 40s linear infinite;
+}
