@@ -42,7 +42,7 @@ const AnimatedInView = ({ children, tag: Tag = 'div', variants, once = true, amo
 
 // Modern SVG Components (No changes needed, they are great as is!)
 const FloatingParticles = () => (
-    <svg className="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 1000 800" preserveAspectRatio="xMidYMid slice">
+    <svg className="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 1000 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
         <defs>
             <linearGradient id="particle-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#3b82f6" />
@@ -75,7 +75,7 @@ const FloatingParticles = () => (
     </svg>
 );
 const ModernTechPattern = () => (
-    <svg viewBox="0 0 400 300" className="w-full h-auto opacity-30" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="0 0 400 300" className="w-full h-auto opacity-30" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
         <defs>
             <linearGradient id="tech-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#3b82f6" />
@@ -114,7 +114,7 @@ const ModernTechPattern = () => (
     </svg>
 );
 const GeometricPattern = () => (
-    <svg className="absolute top-0 right-0 w-96 h-96 opacity-10" viewBox="0 0 200 200">
+    <svg className="absolute top-0 right-0 w-96 h-96 opacity-10" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
         <defs>
             <linearGradient id="geometric-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#3b82f6" />
@@ -146,16 +146,16 @@ const Header = () => {
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-gray-800/95 backdrop-blur-md shadow-2xl border-b border-gray-600' : 'bg-transparent'}`}>
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
                 <div className="text-2xl font-bold text-white tracking-wider">AVD INOVEX</div>
-                <nav className="hidden md:flex space-x-8">
+                <nav className="hidden md:flex space-x-8" aria-label="Primary">
                     {navItems.map((item) => (
                         <a key={item} href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-gray-300 hover:text-blue-400 transition-colors duration-300">
                             {item}
                         </a>
                     ))}
                 </nav>
-                <button className="hidden md:inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white py-2 px-6 rounded-lg font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25">
+                <a href="#contact" className="hidden md:inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white py-2 px-6 rounded-lg font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25">
                     Get a Quote
-                </button>
+                </a>
             </div>
         </header>
     );
@@ -202,12 +202,12 @@ const HeroSection = () => (
                     AVD Inovex is your strategic partner in crafting bespoke websites, powerful web applications, and cutting-edge AI-driven platforms that redefine industries.
                 </motion.p>
                 <motion.div variants={variants.fadeInUp} className="flex flex-col sm:flex-row justify-center gap-4">
-                    <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-4 px-8 rounded-xl text-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-xl shadow-blue-500/25">
+                    <a href="#showcase" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-4 px-8 rounded-xl text-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-xl shadow-blue-500/25">
                         Explore Our Work
-                    </button>
-                    <button className="bg-gray-700/80 backdrop-blur-sm border-2 border-gray-500 text-gray-200 py-4 px-8 rounded-xl text-lg font-semibold hover:bg-gray-600 hover:border-blue-400 hover:text-white transition-all duration-300 transform hover:scale-105">
+                    </a>
+                    <a href="#contact" className="bg-gray-700/80 backdrop-blur-sm border-2 border-gray-500 text-gray-200 py-4 px-8 rounded-xl text-lg font-semibold hover:bg-gray-600 hover:border-blue-400 hover:text-white transition-all duration-300 transform hover:scale-105">
                         Contact Us <ArrowRight className="inline-block ml-2 w-5 h-5" />
-                    </button>
+                    </a>
                 </motion.div>
             </motion.div>
         </div>
@@ -244,7 +244,7 @@ const ServicesSection = () => {
                         >
                             <div className="bg-gray-800/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-600 transition-colors duration-500 group-hover:border-blue-500/50 h-full shadow-lg">
                                 <div className={`p-4 bg-gradient-to-r ${service.gradient} rounded-2xl w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                                    <service.icon className="w-8 h-8 text-white" />
+                                    <service.icon className="w-8 h-8 text-white" aria-hidden="true" />
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
                                 <p className="text-gray-400 leading-relaxed">{service.description}</p>
@@ -285,7 +285,7 @@ const AiSpecializationSection = () => (
                         ].map((item, index) => (
                             <motion.div key={index} variants={variants.fadeInUp} className="flex items-center group">
                                 <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                                    <item.icon className="w-5 h-5 text-white" />
+                                    <item.icon className="w-5 h-5 text-white" aria-hidden="true" />
                                 </div>
                                 <span className="text-gray-300 font-medium">{item.text}</span>
                             </motion.div>
@@ -348,7 +348,7 @@ const ShowcaseSection = () => {
                                     <h3 className="text-2xl font-bold text-white">{project.title}</h3>
                                 </div>
                                 <motion.div initial={{ opacity: 0, scale: 0.8 }} whileHover={{ opacity: 1, scale: 1 }} className="absolute top-6 right-6 p-3 bg-white/20 backdrop-blur-sm rounded-full transition-opacity duration-300 border border-white/30">
-                                    <MoveUpRight className="w-6 h-6 text-white" />
+                                    <MoveUpRight className="w-6 h-6 text-white" aria-hidden="true" />
                                 </motion.div>
                             </motion.div>
                         </motion.div>
@@ -414,7 +414,7 @@ const TestimonialsSection = () => {
                     {duplicatedTestimonials.map((testimonial, index) => (
                         <div key={index} className="w-[clamp(20rem,35vw,28rem)] mx-4 flex-shrink-0">
                             <div className="bg-gray-700/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-600 transition-all duration-300 hover:!scale-105 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 h-full">
-                                <Quote className="w-12 h-12 text-blue-400 mb-6" />
+                                <Quote className="w-12 h-12 text-blue-400 mb-6" aria-hidden="true" />
                                 <p className="text-gray-300 text-lg mb-8 italic leading-relaxed">"{testimonial.quote}"</p>
                                 <div className="flex items-center mt-auto">
                                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold mr-4 shadow-lg">
@@ -518,7 +518,7 @@ const App = () => {
     return (
         <div className="bg-gray-800 font-sans antialiased">
             <Header />
-            <main>
+            <main id="main-content">
                 <HeroSection />
                 <ServicesSection />
                 <AiSpecializationSection />

@@ -2,11 +2,78 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Primary Meta Tags -->
+    <title>AVD Inovex — AI-Powered Web, Mobile & Software Development</title>
+    <meta name="title" content="AVD Inovex — AI-Powered Web, Mobile & Software Development" />
+    <meta name="description" content="AVD Inovex builds high-performance websites, web apps, mobile apps, and AI solutions. We craft modern, scalable products that drive growth and efficiency." />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="AVD Inovex" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- Canonical -->
+    <!-- Assumption: production domain is https://www.avdinovex.com -->
+    <link rel="canonical" href="https://www.avdinovex.com/" />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.avdinovex.com/" />
+    <meta property="og:title" content="AVD Inovex — AI-Powered Web, Mobile & Software Development" />
+    <meta property="og:description" content="Websites, web apps, mobile apps, and AI platforms — engineered for performance and results." />
+    <meta property="og:image" content="/vite.svg" />
+    <meta property="og:site_name" content="AVD Inovex" />
+  <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AVD Inovex — AI-Powered Web, Mobile & Software Development" />
+    <meta name="twitter:description" content="Websites, web apps, mobile apps, and AI platforms — engineered for performance and results." />
+    <meta name="twitter:image" content="/vite.svg" />
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AVD Inovex",
+        "url": "https://www.avdinovex.com/",
+        "logo": "https://www.avdinovex.com/vite.svg",
+        "email": "office@avdinovex.com",
+        "telephone": "+91-22-40709812",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "B/118, Mandpeswar Industrial Estates, Borivali(W)",
+          "postalCode": "400092",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://twitter.com/",
+          "https://www.linkedin.com/",
+          "https://github.com/"
+        ]
+      }
+    </script>
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AVD Inovex",
+        "url": "https://www.avdinovex.com/",
+        "inLanguage": "en"
+      }
+    </script>
   </head>
   <body>
+    <!-- Accessibility: Skip link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-black text-white px-3 py-2 rounded">Skip to content</a>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

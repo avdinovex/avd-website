@@ -1,0 +1,5 @@
+# robots.txt for https://www.avdinovex.com/
+User-agent: *
+Allow: /
+
+Sitemap: https://www.avdinovex.com/sitemap.xml

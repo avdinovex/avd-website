@@ -1,0 +1,7 @@
+/* TEAM */
+Developer: AVD Inovex
+Site: https://www.avdinovex.com/
+Contact: office@avdinovex.com
+
+/* THANKS */
+Built with Vite + React + Tailwind CSS
