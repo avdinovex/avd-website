@@ -453,9 +453,9 @@ const ContactSection = () => (
                     <motion.p variants={variants.fadeInUp} className="text-gray-300 mb-8 leading-relaxed">We're open for any suggestions or just to have a chat. Feel free to reach out directly or use the contact form.</motion.p>
                     <motion.div variants={variants.fadeInUp} className="space-y-6">
                         {[
-                            { icon: Phone, title: "Phone", value: "+1 (234) 567-890", href: "tel:+1234567890" },
-                            { icon: Mail, title: "Email", value: "contact@avdinovex.com", href: "mailto:contact@avdinovex.com" },
-                            { icon: MapPin, title: "Address", value: "123 Innovation Drive, Tech City, 10101" }
+                            { icon: Phone, title: "Phone", value: "022-40709812", href: "tel:022-40709812" },
+                            { icon: Mail, title: "Email", value: "office@avdinovex.com", href: "mailto:office@avdinovex.com" },
+                            { icon: MapPin, title: "Address", value: "B/118, Mandpeswar Industrial Estates, Borivali(W), 400092" }
                         ].map(item => (
                             <div key={item.title} className="flex items-center">
                                 <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg mr-4 shadow-lg flex-shrink-0">
